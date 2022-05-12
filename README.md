@@ -1,32 +1,61 @@
-# GROUP-NAME - lab NUMBER - variant NUMBER
+# ddd - Lab2 - Variant 2
 
-This is an example project which demonstrates project structure and necessary
-CI checks. It is not the best structure for real-world projects, but good
-enough for educational purposes.
+## group name and group member
 
-## Project structure
+- Name:
+  - ddd
 
-- `foo.py` -- implementation of `Foo` class with `hello` and `add` features.
-   Stateless.
-- `foo_test.py` -- unit and PBT tests for `Foo`.
+- Member
+  - Wang Qihang:
+    - id: 212320003
+    - email: Wqhlw@hdu.edu.cn
+  - Wang Zehao:
+    - id: 212320005
+    - email: 15029930122@163.com
 
-## Features
+## Variant 2
 
-- PBT: `test_add_commutative`
+### Set based on hash-map, separate chaining
 
-## Contribution
+You can use the built-in list for storing buckets and a bucket itself.
 
-- Aleksandr Penskoi (EMAIL) -- all work.
+You need to check that your implementation correctly works with None value.
+
+## contribution
+
+Wang Qihang Completed the mutable.py
+
+Wang Zehao Completed the test_mutable.py
 
 ## Changelog
 
-- 29.03.2022 - 2
-  - Add test coverage.
-- 29.03.2022 - 1
-  - Update README. Add formal sections.
-- 29.03.2022 - 0
+- 05.05.2022 - 3
+  - Modified empty function
+  - Add docstrings for all functions.
+- 25.04.2022 - 2
+  - Fix problems in email
+- 16.04.2022 - 1
+  - Add Wang Zehao upload test_mutable.py
+- 15.04.2022 - 1
+  - Wang Qihang upload mutable.py
+- 14.04.2022 - 0
   - Initial
 
 ## Design notes
 
-- ...
+- Advantages of unittest:
+  - Support automated testing
+  - Secondary development is convenient
+  - Organize test cases together by class
+
+- Disadvantages of unittest:
+  - Must be written in TestCase subclass
+  - Must write test method
+  - Difficult to expand
+
+- Advantages of PBT tests:
+  - Check with automatically generated input data to ensure enough test cases
+  - Allows developers to increase test coverage and effectively save time
+
+- Disadvantages of PBT tests:
+  - Not covering all examples

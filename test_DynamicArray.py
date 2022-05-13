@@ -3,8 +3,8 @@ import math
 from hypothesis import given
 import hypothesis.strategies as st
 from DynamicArray import DynamicArray, cons, remove, length
-from DynamicArray import isMember, reverse, to_list, from_list
-from DynamicArray import find, filter_the_value, map_the_value
+from DynamicArray import member, reverse, to_list, from_list
+from DynamicArray import find, filter, map
 from DynamicArray import reduce, iterator_element, next_element
 from DynamicArray import empty, concat
 

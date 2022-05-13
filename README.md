@@ -21,9 +21,9 @@ test_DynamicArray.py -- unit and PBT tests for classes and functions in DynamicA
 
 ## contribution
 
-Wang Qihang Completed the mutable.py
+Wang Qihang Completed the DynamicArray.py
 
-Wang Zehao Completed the test_mutable.py
+Wang Zehao Completed the test_DynamicArray.py
 
 ## Changelog
 

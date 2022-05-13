@@ -1,6 +1,3 @@
-import copy
-
-
 class DynamicArray:
     def __init__(self, capacity=10, factor=2):
         self.__capacity = capacity
@@ -56,6 +53,7 @@ class Iterator(object):
 
 
 def cons(lst, ele):
+    import copy
     tmp = copy.deepcopy(lst)
     tmp.add(ele)
     return tmp
@@ -64,7 +62,7 @@ def cons(lst, ele):
 def remove(lst, pos):
     if pos < 0 or pos >= lst.length():
         raise Exception('The location accessed is not in the array!')
-    tmp = DynamicArray(capacity=len(lst1))
+    tmp = DynamicArray()
     for i, _ in enumerate(lst):
         if i != pos:
             tmp.add(_)
@@ -111,7 +109,7 @@ def find(lst, f):
 
 
 def filter(f, lst):
-    res = DynamicArray(capacity=lst.length())
+    res = DynamicArray()
     for k in lst:
         if f(k):
             res.add(k)
@@ -145,11 +143,11 @@ def iterator(lst):
 
 
 def empty():
-    return DynamicArray(capacity=0)
+    return DynamicArray()
 
 
 def concat(lst1, lst2):
-    res = DynamicArray(capacity=lst1.length()+lst2.length())
+    res = DynamicArray()
     for k in lst1:
         res.add(k)
     for k in lst2:
@@ -162,7 +160,7 @@ def set(lst, p, v):
         raise Exception('Input data must be int or None')
     if p < 0 or p >= lst.length():
         raise Exception('The location accessed is not in the array!')
-    res = DynamicArray(capacity=lst.length())
+    res = DynamicArray()
     for idx, i in enumerate(lst):
         if p == idx:
             res.add(v)

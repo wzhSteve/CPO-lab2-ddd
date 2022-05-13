@@ -26,6 +26,7 @@ class TestDynamicArray(unittest.TestCase):
         self.assertEqual(l1, cons(cons(empty_, 1), None))
         self.assertEqual(length(empty_), 0)
         self.assertEqual(length(l1), 2)
+
         self.assertEqual(length(l2), 2)
         self.assertEqual(str(remove(l1, 0)), "[None]")
         self.assertEqual(str(remove(l1, 1)), "[1]")
@@ -49,27 +50,34 @@ class TestDynamicArray(unittest.TestCase):
         self.assertEqual(lst, [])
 
     def test_set(self):
+        # llq
         empty_ = DynamicArray()
+
         l1 = cons(cons(empty_, 1), None)
         l2 = cons(cons(empty_, 2), 1)
+
         self.assertEqual(str(set(l1, 0, None)), '[None, None]')
         self.assertEqual(str(set(l2, 1, 2)), '[2, 2]')
 
     @given(st.lists(st.integers()))
     def test_size(self, a):
+        # llq
         b = from_list(a)
         self.assertEqual(length(b), len(a))
 
     def test_reverse(self):
+        # llq
         a = [1, 3, 4, None, 4]
         b = from_list(a)
         self.assertEqual(str(reverse(b)), '[4, None, 4, 3, 1]')
 
     @given(st.lists(st.integers()))
     def test_from_list_to_list_equality(self, a):
+        # llq
         self.assertEqual(to_list(from_list(a)), a)
 
     def test_find(self):
+        # wzm
         a = [1, 3, 4, None, 4]
         self.assertTrue(find(a, lambda x: x is None))
         self.assertTrue(find(a, lambda x: x % 2 == 0))
@@ -78,6 +86,7 @@ class TestDynamicArray(unittest.TestCase):
 
     @given(st.lists(st.integers()))
     def test_filter(self, a):
+        # wzm
         from builtins import filter as gt_filter
         arr = from_list(a)
         result = list(gt_filter(lambda x: x % 2 == 0, a))
@@ -85,8 +94,11 @@ class TestDynamicArray(unittest.TestCase):
         result = list(gt_filter(lambda x: x % 2 != 0, a))
         self.assertEqual(to_list(filter(lambda x: x % 2 != 0, arr)), result)
 
-    @given(st.lists(st.integers()), st.lists(st.integers()), st.lists(st.integers()))
+    @given(st.lists(st.integers()),
+           st.lists(st.integers()),
+           st.lists(st.integers()))
     def test_map(self, a, b, c):
+        # wzm
         from builtins import map as gt_map
         arr = from_list(a)
         result = list(gt_map(lambda x: x ** 2, a))
@@ -107,6 +119,7 @@ class TestDynamicArray(unittest.TestCase):
 
     @given(st.lists(st.integers()), st.integers())
     def test_reduce(self, a, b):
+        # wzm
         arr = from_list(a)
         if arr.length() == 0:
             self.assertEqual(b, reduce(lambda x, y: x + y, arr, b))
@@ -120,6 +133,7 @@ class TestDynamicArray(unittest.TestCase):
             self.assertEqual(reduce(lambda x, y: x + y, arr, b), result)
 
     def test_iter(self):
+        # llq
         x = [1, 2, 3]
         lst = from_list(x)
         tmp = []
@@ -135,12 +149,16 @@ class TestDynamicArray(unittest.TestCase):
         self.assertRaises(StopIteration, lambda: next(it))
 
     def test_empty(self):
+        # llq
         a = empty()
         b = from_list([])
         self.assertEqual(a, b)
 
-    @given(st.lists(st.integers()), st.lists(st.integers()), st.lists(st.integers()))
+    @given(st.lists(st.integers()),
+           st.lists(st.integers()),
+           st.lists(st.integers()))
     def test_monoid(self, a, b, c):
+        # llq
         da = from_list(a)
         db = from_list(b)
         dc = from_list(c)
@@ -149,6 +167,7 @@ class TestDynamicArray(unittest.TestCase):
 
     @given(st.lists(st.integers()))
     def test_monoid_identity(self, lst):
+        # llq
         a = from_list(lst)
         self.assertEqual(concat(empty(), a), a)
         self.assertEqual(concat(a, empty()), a)

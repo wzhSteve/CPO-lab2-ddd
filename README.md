@@ -15,24 +15,28 @@
 
 ## Project structure
 
-DynamicArray.py -- includes class DynamicArray with methods add, length, __eq__ and __str__, class Iterator with __iter__ and __next__, and functions cons, remove, length, member, reverse, set, to_list, from_list, find, filter, map, reduce, iterator, empty, and concat.
+- `DynamicArray.py` -- includes class `DynamicArray` with methods `add`, `length`, `__eq__` and `__str__`,
+ class `Iterator` with `__iter__` and `__next__`,
+ and functions `cons`, `remove`, `length`, `member`, `reverse`, `set`,
+ `to_list`, `from_list`,
+ `find`, `filter`, `map`, `reduce`, `iterator`, `empty`, and `concat`.
 
-test_DynamicArray.py -- unit and PBT tests for classes and functions in DynamicArray.py.
+- `test_DynamicArray.py` -- unit and PBT tests for classes and functions in `DynamicArray.py`.
 
 ## contribution
 
-Wang Qihang Completed the DynamicArray.py
+- Wang Qihang Completed the DynamicArray.py
 
-Wang Zehao Completed the test_DynamicArray.py
+- Wang Zehao Completed the test_DynamicArray.py
 
 ## Changelog
 
 - 13.04.2022 - 2
-  - Wang Qihang upload DynamicArray.py
+  - Wang Qihang upload DynamicArray.py.
 - 13.04.2022 - 1
-  - Wang Zehao upload DynamicArray.py
+  - Wang Zehao upload DynamicArray.py.
 - 13.05.2022 - 0
-  - Initial
+  - Initial.
 
 ## Design notes
 
@@ -53,4 +57,4 @@ Wang Zehao Completed the test_DynamicArray.py
   - Traditional concurrency requires locking, but this data is inherently immutable, so concurrency is not needed
 
 - Disadvantages of immutable tests:
-  - Immutable algorithms require a separate object for each distinct value. 
+  - Immutable algorithms require a separate object for each distinct value.

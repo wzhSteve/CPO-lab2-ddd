@@ -15,14 +15,14 @@
 
 ## contribution
 
-- Wang Qihang Completed the DynamicArray.py
+- Wang Qihang Completed the test_DynamicArray.py
 
-- Wang Zehao Completed the test_DynamicArray.py
+- Wang Zehao Completed the DynamicArray.py
 
 ## Changelog
 
 - 13.04.2022 - 2
-  - Wang Qihang upload DynamicArray.py.
+  - Wang Qihang upload test_DynamicArray.py.
 - 13.04.2022 - 1
   - Wang Zehao upload DynamicArray.py.
 - 13.05.2022 - 0

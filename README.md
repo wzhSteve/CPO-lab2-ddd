@@ -13,13 +13,11 @@
     - id: 212320005
     - email: 15029930122@163.com
 
-## Variant 2
+## Project structure
 
-### Set based on hash-map, separate chaining
+DynamicArray.py -- includes class DynamicArray with methods add, length, __eq__ and __str__, class Iterator with __iter__ and __next__, and functions cons, remove, length, member, reverse, set, to_list, from_list, find, filter, map, reduce, iterator, empty, and concat.
 
-You can use the built-in list for storing buckets and a bucket itself.
-
-You need to check that your implementation correctly works with None value.
+test_DynamicArray.py -- unit and PBT tests for classes and functions in DynamicArray.py.
 
 ## contribution
 
@@ -29,16 +27,11 @@ Wang Zehao Completed the test_mutable.py
 
 ## Changelog
 
-- 05.05.2022 - 3
-  - Modified empty function
-  - Add docstrings for all functions.
-- 25.04.2022 - 2
-  - Fix problems in email
-- 16.04.2022 - 1
-  - Add Wang Zehao upload test_mutable.py
-- 15.04.2022 - 1
-  - Wang Qihang upload mutable.py
-- 14.04.2022 - 0
+- 13.04.2022 - 2
+  - Wang Qihang upload DynamicArray.py
+- 13.04.2022 - 1
+  - Wang Zehao upload DynamicArray.py
+- 13.05.2022 - 0
   - Initial
 
 ## Design notes
@@ -53,9 +46,12 @@ Wang Zehao Completed the test_mutable.py
   - Must write test method
   - Difficult to expand
 
-- Advantages of PBT tests:
-  - Check with automatically generated input data to ensure enough test cases
-  - Allows developers to increase test coverage and effectively save time
+- Advantages of immutable tests:
+  - Immutable algorithms reduces the complexity that mutable algorithms brings
+  - Save memory
+  - Copy and paste these operations are very simple to do
+  - Traditional concurrency requires locking, but this data is inherently immutable, so concurrency is not needed
 
-- Disadvantages of PBT tests:
-  - Not covering all examples
+
+- Disadvantages of immutable tests:
+  - Immutable algorithms require a separate object for each distinct value. 

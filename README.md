@@ -52,6 +52,5 @@ Wang Zehao Completed the test_DynamicArray.py
   - Copy and paste these operations are very simple to do
   - Traditional concurrency requires locking, but this data is inherently immutable, so concurrency is not needed
 
-
 - Disadvantages of immutable tests:
   - Immutable algorithms require a separate object for each distinct value. 

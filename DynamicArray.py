@@ -1,6 +1,6 @@
 class DynamicArray:
     """ Immutable dynamic array Implementation """
-    
+
     def __init__(self, capacity=10, factor=2):
         """
             Create an instance of DynamicArray.
@@ -47,7 +47,7 @@ class DynamicArray:
 
 class Iterator(object):
     """ An iterator object of DynamicArray. """
-    
+ 
     def __init__(self, lst, lng):
         self.__chunk = lst
         self.__length = lng
@@ -138,10 +138,13 @@ def filter(f, lst):
 
 def map(f, *iters):
     """
-         Apply the function to each instance of dynamiccarray and produce results.
+         Apply the function to each instance of dynamiccarray 
+         and produce results.
          If other instance parameters are passed,
-         the function must accept so many parameters and apply them to items in all instances in parallel.
-         For multiple instances, the mapping stops when the shortest instance runs out.
+         the function must accept so many parameters 
+         and apply them to items in all instances in parallel.
+         For multiple instances, 
+         the mapping stops when the shortest instance runs out.
     """
     res = DynamicArray()
     for args in zip(*iters):

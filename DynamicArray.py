@@ -137,12 +137,12 @@ def filter(f, lst):
 
 
 def map(f, *iters):
-    """ Apply the function to each instance of dynamiccarray 
+    """ Apply the function to each instance of dynamiccarray
          and produce results.
          If other instance parameters are passed,
-         the function must accept so many parameters 
+         the function must accept so many parameters
          and apply them to items in all instances in parallel.
-         For multiple instances, 
+         For multiple instances,
          the mapping stops when the shortest instance runs out.
     """
     res = DynamicArray()

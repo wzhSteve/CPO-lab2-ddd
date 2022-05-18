@@ -159,7 +159,7 @@ class TestDynamicArray(unittest.TestCase):
         a = from_list(lst)
         self.assertEqual(concat(empty(), a), a)
         self.assertEqual(concat(a, empty()), a)
-    
+
     def test_immutability(self) -> None:
         a = from_list([1, 2, 3, 4, 5, 6, 7, 8, 3, 4])
         # do some operations on a

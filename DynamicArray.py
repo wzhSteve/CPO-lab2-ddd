@@ -47,7 +47,7 @@ class DynamicArray:
 
 class Iterator(object):
     """ An iterator object of DynamicArray. """
- 
+
     def __init__(self, lst, lng):
         self.__chunk = lst
         self.__length = lng
@@ -137,8 +137,7 @@ def filter(f, lst):
 
 
 def map(f, *iters):
-    """
-         Apply the function to each instance of dynamiccarray 
+    """ Apply the function to each instance of dynamiccarray 
          and produce results.
          If other instance parameters are passed,
          the function must accept so many parameters 
@@ -153,15 +152,14 @@ def map(f, *iters):
 
 
 def reduce(function, lst, initializer=None):
-    """
-        Apply function of two arguments cumulatively to the items of the
-                array, from left to right, to reduce the array to a single value.
-        :param function: Callable.
-        :param lst: array.
-        :param initial: If the optional initializer is present, it is placed
-            before the items of the array in the calculation, and serves as
-            a default when the array is empty. If initializer is not given
-            and array contains only one item, the first item is returned.
+    """ Apply function of two arguments cumulatively to the items of the
+            array, from left to right, to reduce the array to a single value.
+    :param function: Callable.
+    :param lst: array.
+    :param initial: If the optional initializer is present, it is placed
+        before the items of the array in the calculation, and serves as
+        a default when the array is empty. If initializer is not given
+        and array contains only one item, the first item is returned.
     """
     it = iterator(lst)
     if initializer is None:
